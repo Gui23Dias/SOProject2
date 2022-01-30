@@ -219,7 +219,7 @@ static void waitUntilDestination (unsigned int passengerId)
     }
 
     /* insert your code here */
-    sh->fSt.nPassInFlight--; //-1 passa no voo
+    sh->fSt.nPassInFlight--; //-1 passageiro no voo
     sh->fSt.st.passengerStat[passengerId] = AT_DESTINATION; //passageiro chegou ao destino
     saveState(nFic, &sh->fSt);
 

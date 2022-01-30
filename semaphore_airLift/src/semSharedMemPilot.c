@@ -270,6 +270,7 @@ static void dropPassengersAtTarget ()
 
     /* insert your code here */
     saveFlightReturning(nFic, &sh->fSt);
+    
     if (semUp (semgid, sh->mutex) == -1)  {                                                   /* exit critical region */
         perror ("error on the up operation for semaphore access (PT)");
         exit (EXIT_FAILURE);
