@@ -252,10 +252,10 @@ static bool checkPassport()
     sh->fSt.totalPassBoarded++; //numero total de passageiros que embarcaram aumenta 1
     saveState(nFic, &sh->fSt);
     
-    if (nPassengersInFlight() == MAXFC || (nPassengersInFlight() >= MINFC && nPassengersInQueue() == 0) || sh->fSt.totalPassBoarded == N){
+    if ((nPassengersInFlight() >= MINFC && nPassengersInQueue() == 0) || nPassengersInFlight() == MAXFC ||  sh->fSt.totalPassBoarded == N){
         last = true; // condições para checkar se este é o último passageiro a embarcar.
     }
-    else {
+    else{
         last = false; 
         sh->fSt.st.hostessStat = WAIT_FOR_PASSENGER;
         saveState(nFic, &sh->fSt);
