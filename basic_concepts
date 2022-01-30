@@ -1,0 +1,5 @@
+Down no mutex para entrar na critical region
+Up no mutex para sair da critical region
+
+Na critical region dás update ao state da hostess/pilot/passenger
+Depois de saires da critical region tens dar down no semaphore da tabela
