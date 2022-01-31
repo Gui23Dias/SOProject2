@@ -148,7 +148,7 @@ static void waitInQueue (unsigned int passengerId)
     /* insert your code here */
     
     sh->fSt.nPassInQueue++; //adiciona 1 passageiro à queue
-    sh->fSt.st.passengerStat[passengerId] = IN_QUEUE;
+    sh->fSt.st.passengerStat[passengerId] = IN_QUEUE; //estado do passageiro em questão(relacionado com o seu ID) é alterado
     saveState(nFic, &sh->fSt); 
 
     if (semUp (semgid, sh->mutex) == -1)                                                      /* exit critical region */
