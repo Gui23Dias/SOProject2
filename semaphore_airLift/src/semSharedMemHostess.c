@@ -247,8 +247,8 @@ static bool checkPassport()
     /* insert your code here */
     savePassengerChecked(nFic, &sh->fSt);
 
-    sh->fSt.nPassInQueue--; // numero de passageiros na fila diminui 1
     sh->fSt.nPassInFlight++; // numero de passageiros no voo aumenta 1
+    sh->fSt.nPassInQueue--; // numero de passageiros na fila diminui 1
     sh->fSt.totalPassBoarded++; //numero total de passageiros que embarcaram aumenta 1
     saveState(nFic, &sh->fSt);
     
