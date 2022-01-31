@@ -299,7 +299,7 @@ void  signalReadyToFlight()
 
     /* insert your code here */
 
-    sh->fSt.nPassengersInFlight[sh->fSt.nFlight-1] = nPassengersInFlight();
+    sh->fSt.nPassengersInFlight[sh->fSt.nFlight-1] = nPassengersInFlight(); // atualiza nº de passageiros neste voo
     sh->fSt.st.hostessStat = READY_TO_FLIGHT;
     saveState(nFic, &sh->fSt);
     saveFlightDeparted(nFic, &sh->fSt);
