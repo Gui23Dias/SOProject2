@@ -142,7 +142,7 @@ static void flight (bool go)
     }
 
     /* insert your code here */
-    if (go){ //se go == true, avião está a voar para o destino, else está a voltar.
+    if (go == true){ //se go == true, avião está a voar para o destino, else está a voltar.
         sh->fSt.st.pilotStat = FLYING;
         saveState(nFic, &sh->fSt);
     }
