@@ -174,8 +174,8 @@ static void waitInQueue (unsigned int passengerId)
     }
 
     /* insert your code here */
-    sh->fSt.passengerChecked = passengerId;
-    sh->fSt.st.passengerStat[passengerId] = IN_FLIGHT;
+    sh->fSt.passengerChecked = passengerId; //update do ID do último passageiro a ser checkado pela hospedeira
+    sh->fSt.st.passengerStat[passengerId] = IN_FLIGHT; //estado do passageiro em questão(relacionado com o seu ID) é alterado
     saveState(nFic, &sh->fSt);
 
 
