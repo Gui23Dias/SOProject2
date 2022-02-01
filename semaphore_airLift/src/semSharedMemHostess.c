@@ -267,7 +267,7 @@ static bool checkPassport()
     }
 
     /* insert your code here */
-
+    //No need for that.
     return last;
 }
 
