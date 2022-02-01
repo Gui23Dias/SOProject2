@@ -252,12 +252,17 @@ static void dropPassengersAtTarget ()
 
     /* insert your code here */
     
-    for (int i = 0; i < sh->fSt.nPassengersInFlight[sh->fSt.nFlight-1]; i++){
+    
+    int x = 0;
+    while(x < sh->fSt.nPassengersInFlight[sh->fSt.nFlight-1]){
+        x++;
         if (semUp(semgid, sh->passengersWaitInFlight) == -1) { //up no semáforo passengersWaitInFlight por cada passageiro no voo
-            perror ("error on the down operation for semaphore access (PT)");
-            exit (EXIT_FAILURE);
+             perror ("error on the down operation for semaphore access (PT)");
+             exit (EXIT_FAILURE);
         }
-    } 
+
+    }
+
     if (semDown(semgid, sh->planeEmpty) == -1){
         perror ("error on the down operation for semaphore access (PT)");
         exit (EXIT_FAILURE);
